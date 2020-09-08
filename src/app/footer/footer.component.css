@@ -1,0 +1,42 @@
+footer {
+    padding: 7rem 0;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+a, a:link, a:hover, a:active, a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-icons:hover {
+    color: var(--primary);
+}
+
+.footer-icons {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 1rem;
+}
+
+.footer-icons:last-of-type {
+    margin-bottom: 0;
+}
+
+.copyright {
+    font-family: 'Montserrat-Thin';
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 286px) {
+    .footer-icons {
+        display: inline-block;
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    .footer-icons:last-of-type {
+        margin-right: 0;
+    }
+}

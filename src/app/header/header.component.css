@@ -1,0 +1,58 @@
+body {
+    padding-top: 92px;
+}
+
+nav {
+    padding: 1rem 1rem;
+}
+
+a.navbar-brand span {
+    font-size: 1.25rem;
+    font-family: 'Montserrat-Bold';
+}
+
+.bg-black {
+    background-color: #111111;
+}
+
+.bg-transparent {
+    background-color: #111111 !important;
+}
+
+a.nav-link {
+    font-size: 1rem;
+    font-family: 'Montserrat-Thin';
+}
+
+li.nav-item {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+li.nav-item.active {
+    background-color: var(--primary);
+}
+
+.nav-logo {
+    width: 50px;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    font-family: 'Montserrat';
+}
+
+@media (min-width: 768px) {
+    .nav-logo {
+        width: 70px;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        min-height: 0;
+    }
+
+    .bg-transparent {
+        background-color: transparent !important;
+    }
+}

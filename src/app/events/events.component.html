@@ -1,0 +1,44 @@
+<section id="section-events">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="section-title">UPCOMING EVENTS</h2>
+            </div>
+        </div>
+        <div class="row" *ngIf="events.length < 1">
+            <div class="col-sm-12 text-center">
+                <div class="alert alert-secondary" role="alert">
+                    Unfortunately, there are no events to display right now.
+                </div>
+            </div>
+        </div>
+        <div class="row event-row" *ngIf="events.length > 0">
+            <div class="col-lg-6 event-item" *ngFor="let event of events">
+                <div class="card h-100">
+                    <div class="row no-gutters h-100 event-row">
+                        <div class="col-xl-3 col-md-4 text-center date-item">
+                            <div class="card-body">
+                                <span class="date-number">{{ getDateDay(event.date) }}</span>
+                                <hr class="date-line">
+                                <span class="date-month">{{ getDateMonth(event.date) }}</span>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-md-8">
+                            <div class="event-content">
+                                <h3 class="card-title mb-2 event-name">{{ event.name }}</h3>
+                                <div class="card-subtitle mb-2 text-muted event-time"><i class="far fa-clock fa-xs"></i> {{ event.time }}</div>
+                                <div class="card-text">
+                                    <div class="event-details">{{ event.details }}</div>
+                                    <div class="mt-2 text-muted event-address">
+                                        {{ getLineOneFromAddress(event.address) }}<br>
+                                        {{ getLineTwoFromAddress(event.address) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,33 @@
+<section id="section-sermons">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="section-title">RECENT SERMONS</h2>
+            </div>
+        </div>
+        <div class="row" *ngIf="sermons.length < 1">
+            <div class="col-sm-12 text-center">
+                <div class="alert alert-secondary" role="alert">
+                    Unfortunately, there are no sermons to display right now.
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="sermons.length > 0">
+            <div class="col-xl-4 col-lg-6 sermon-item" *ngFor="let sermon of sermons">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title sermon-title">{{ sermon.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted sermon-scripture">{{ sermon.scripture }}</h6>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted sermon-speaker">{{ sermon.speaker }}</small>
+                            <small class="text-muted sermon-date">{{ formatDate(sermon.date) }}</small>
+                        </div>
+                    </div>
+                    <div class="card-footer sermon-audio">
+                        <audio src="{{ sermon.mp3 }}" controls="controls">Your browser doesn&#039;t support this audio player</audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+#section-banner {
+    margin-top: 50px;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(34, 34, 34, 0.3)), url(https://images.unsplash.com/photo-1515896769750-31548aa180ed);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+
+h1 {
+    font-family: 'Montserrat-Bold';
+    color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    #section-banner {
+        margin-top: 0;
+        height: 100vh;
+    }
+}
