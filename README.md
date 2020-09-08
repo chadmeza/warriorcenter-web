@@ -1,6 +1,6 @@
-# Warriorcenter
+# Warrior Center
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+Web application for a church developed using Angular, TypeSript, Javascript, HTML, and CSS.
 
 ## Development server
 
